@@ -21,70 +21,66 @@
 
             label = "Base";
             bindings = <
-&none  &kp Q  &kp W  &kp F     &kp P  &kp G        &kp J    &kp L  &kp U      &kp Y    &kp SEMI  &none
-&none  &kp A  &kp R  &kp S     &kp T  &kp D        &kp H    &kp N  &kp E      &kp I    &kp O     &none
-&none  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp K    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &kp LGUI  &mo 4  &kp SPACE    &kp RET  &mo 5  &kp RALT
+&none  &kp Q             &kp W  &kp F                   &kp P      &kp G            &kp J              &kp L  &kp U                 &kp Y    &kp SEMI           &none
+&none  &mt LEFT_SHIFT A  &kp R  &kp S                   &kp T      &kp D            &kp H              &kp N  &kp E                 &kp I    &mt RIGHT_SHIFT O  &none
+&none  &mt LCTRL Z       &kp X  &kp C                   &kp V      &kp B            &kp K              &kp M  &kp COMMA             &kp DOT  &mt RCTRL SLASH    &none
+                                &mt LEFT_ALT LEFT_META  &lt 1 TAB  &mt TAB SPACE    &mt ESCAPE RETURN  &to 1  &mt RIGHT_ALT ESCAPE
             >;
         };
 
         Numbers {
             bindings = <
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
-&none  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
-&none  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
-                                   &none         &none         &none           &none         &none         &none
+&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp NUMBER_6       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0      &none
+&none  &kp GRAVE     &none         &none         &none         &kp EQUAL           &kp MINUS          &none         &none         &none         &kp SINGLE_QUOTE  &none
+&none  &caps_word    &none         &none         &none         &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &none         &none         &none         &kp BACKSLASH     &none
+                                   &to 0         &to 0         &kp BACKSPACE       &kp DELETE         &to 2         &none
             >;
+
+            label = "Numbers";
         };
 
         Symbols {
             bindings = <
-&none  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none  &kp              &kp          &kp       &kp         &kp            &kp        &kp            &kp           &kp                   &kp                    &none
-&none  &kp              &kp          &kp       &kp         &kp            &kp        &kp            &kp           &kp                   &kp                    &none
-                                     &kp       &kp         &kp            &kp        &kp            &kp
+&none  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT       &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&none  &kp TILDE        &none        &none     &none       &kp PLUS          &kp UNDERSCORE   &none          &none         &none                 &kp DOUBLE_QUOTES      &none
+&none  &none            &none        &none     &none       &kp LEFT_BRACE    &kp RIGHT_BRACE  &none          &none         &none                 &kp PIPE               &none
+                                     &to 0     &to 1       &none             &none            &to 3          &none
             >;
+
+            label = "Symbols";
         };
 
         Functions {
             bindings = <
-&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &none
-&none  &kp     &kp     &kp     &kp     &kp F11    &kp F12  &kp     &kp     &kp     &kp      &none
-&none  &kp     &kp     &kp     &kp     &kp        &kp      &kp     &kp     &kp     &kp      &none
-                       &kp     &kp     &kp        &kp      &kp     &kp
+&none  &kp F1   &kp F2             &kp F3  &kp F4           &kp F5    &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &none
+&none  &kp F11  &kp K_APPLICATION  &none   &kp PRINTSCREEN  &none     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp F12  &none
+&none  &none    &none              &none   &none            &none     &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none    &none
+                                   &to 0   &to 2            &none     &none           &to 4           &none
             >;
+
+            label = "Functions";
         };
 
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            label = "Lower";
+        Numpad {
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC    &kp KP_LEFT_PARENTHESIS   &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &none
+&none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &none
+&none  &none           &none             &none               &kp C_MUTE         &none                   &kp KP_DIVIDE             &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &none
+                                         &to 0               &to 3              &none                   &kp KP_ENTER              &lt 5 KP_NUMBER_0  &kp KP_DOT
             >;
+
+            label = "Numpad";
         };
 
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            label = "Raise";
+        Settings {
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&none  &none         &none         &none         &none         &none           &none  &none       &none       &none  &bt BT_CLR  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &bt BT_NXT  &bt BT_PRV  &none  &none       &none
+&none  &none         &none         &none         &none         &none           &none  &none       &none       &none  &none       &none
+                                   &to 0         &to 4         &none           &none  &none       &none
             >;
+
+            label = "Settings";
         };
     };
 };
